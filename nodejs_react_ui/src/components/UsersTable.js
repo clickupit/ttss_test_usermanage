@@ -136,24 +136,6 @@ const UsersTable = () => {
       .catch((error) => console.log(error));
   };
 
-  // Page Handle
-  const handlePerPageChange = event => {
-    setPerPage(Number(event.target.value));
-    setCurrentPage(1);
-  };
-
-  const handleNextPage = () => {
-    setCurrentPage(prevPage => prevPage + 1);
-  };
-
-  const handlePrevPage = () => {
-    setCurrentPage(prevPage => prevPage - 1);
-  };
-
-  const handleJumpToPage = page => {
-    setCurrentPage(page);
-  };
-
   //แสดง Modal User แบบแก้ไข User
   const handleEditUser = (user) => {
     setSelectedUser(user);
@@ -186,6 +168,24 @@ const UsersTable = () => {
     setSelectedUserHN(null);
     const modalContainer = document.querySelector(".modal-confirm");
     modalContainer.style.display = "none";
+  };
+
+  // Page Handle
+  const handlePerPageChange = event => {
+    setPerPage(Number(event.target.value));
+    setCurrentPage(1);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage(prevPage => prevPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage(prevPage => prevPage - 1);
+  };
+
+  const handleJumpToPage = page => {
+    setCurrentPage(page);
   };
 
   // คำนวณหน้าและ Item ในหน้า
