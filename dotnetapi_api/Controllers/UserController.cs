@@ -99,14 +99,7 @@ namespace dotnetapi_api.Controllers
         {
             var searchTerms = searchTerm.Split(' ');
 
-            var allUsers = _dbContext.Users.ToList();
-
-            if (string.IsNullOrWhiteSpace(searchTerm))
-            {
-                return Ok(allUsers);
-            }
-
-            List<User> fiterUsers = allUsers
+            List<User> fiterUsers = _dbContext.Users.ToList()
                 .Where(user => searchTerms.All(term =>
                     user.HN.ToString().TrimStart('0').IndexOf(term.TrimStart('0'), StringComparison.OrdinalIgnoreCase) >= 0 ||
                     user.Name.IndexOf(term, StringComparison.OrdinalIgnoreCase) >= 0 ||

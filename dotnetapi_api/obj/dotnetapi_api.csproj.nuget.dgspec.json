@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj": {}
+    "C:\\Users\\ITDep\\Desktop\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj": {
+    "C:\\Users\\ITDep\\Desktop\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
+        "projectUniqueName": "C:\\Users\\ITDep\\Desktop\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
         "projectName": "dotnetapi_api",
-        "projectPath": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
+        "projectPath": "C:\\Users\\ITDep\\Desktop\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
         "packagesPath": "C:\\Users\\ITDep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\obj\\",
+        "outputPath": "C:\\Users\\ITDep\\Desktop\\ttss_test_usermanage\\dotnetapi_api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ITDep\\AppData\\Roaming\\NuGet\\NuGet.Config",
