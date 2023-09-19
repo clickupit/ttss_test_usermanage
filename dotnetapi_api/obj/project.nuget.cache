@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CgWnHm45E/Ki8JqBsmkbic8HKv+fyEy9gA5oh7jqo0KH/Esaltx4B+XyCId912K+Uy+5m/3uczyJW484qIuq/w==",
+  "dgSpecHash": "07p8mpIPF57bDUawVx+l0+Ewo9RqesmoP2v6GF+XaINSNPX+vshRrX+1lXgS5dSfEqx67jNyUy0A+N6L/4AqfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ITDep\\My Drive\\Project\\.ttsstest\\dotnetapi_api\\dotnetapi_api.csproj",
+  "projectFilePath": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ITDep\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ITDep\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

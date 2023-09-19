@@ -3827,11 +3827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ITDep\\My Drive\\Project\\.ttsstest\\dotnetapi_api\\dotnetapi_api.csproj",
+      "projectUniqueName": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
       "projectName": "dotnetapi_api",
-      "projectPath": "C:\\Users\\ITDep\\My Drive\\Project\\.ttsstest\\dotnetapi_api\\dotnetapi_api.csproj",
+      "projectPath": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\dotnetapi_api.csproj",
       "packagesPath": "C:\\Users\\ITDep\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ITDep\\My Drive\\Project\\.ttsstest\\dotnetapi_api\\obj\\",
+      "outputPath": "C:\\Users\\ITDep\\My Drive\\Project\\ttss_test_usermanage\\dotnetapi_api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ITDep\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3842,7 +3842,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3901,7 +3900,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
