@@ -9,6 +9,7 @@ const UsersTable = () => {
   const [selectedUserHN, setSelectedUserHN] = useState(null);
   const [bypassConfirmModalTimeStamp, setBypassConfirmModalTimeStamp] = useState(null);
 
+  //ดึงข้อมูล User ผ่าน API Search
   const fetchUsersData = (searchTerm) => {
     fetch(`http://localhost:5000/User/search?searchTerm=${searchTerm}`)
       .then(response => response.json())
@@ -22,10 +23,12 @@ const UsersTable = () => {
       .catch(error => console.log(error));
   };
 
+  //เมื่อเริ่มโปรแกรมให้เรียกข้อมูล User ขึ้นมาแสดงทันที
   useEffect(() => {
     fetchUsersData(searchTerm);
   }, [searchTerm]);
 
+  //เพิ่ม User
   const handlePostUser = () => {
     if (selectedUser.name.trim() === '' || selectedUser.lastname.trim() === '') {
       alert("Please enter the name and lastname.");
@@ -56,6 +59,7 @@ const UsersTable = () => {
     setSelectedUser(null);
   };
 
+  // แก้ไข User
   const handleUpdateUser = () => {
     if (selectedUser.name.trim() === '' || selectedUser.lastname.trim() === '') {
       alert("Please enter the name and lastname.");
@@ -86,6 +90,7 @@ const UsersTable = () => {
     setSelectedUser(null);
   };
 
+  // เริ่มกระบวนการลบ User แสดงหน้าต่างยืนยัน
   const handleDeleteUser = (hn) => {
     const currentTimeStamp = Date.now();
     let bypassConfirm = false;
@@ -105,10 +110,10 @@ const UsersTable = () => {
     }
   };
 
+  // แสดงยืนยันการลบ และบันทึก Bypass Confirm
   const handleConfirmDeleteUser = () => {
-    const checkbox = document.querySelector('input[type="checkbox"]');
-    const isChecked = checkbox.checked;
-    if (isChecked) {
+    const checkbox = document.querySelector('.checkbox-confirm5min');
+    if (checkbox.checked) {
       setBypassConfirmModalTimeStamp(Date.now());
     }
     deleteUser(selectedUserHN);
@@ -118,12 +123,7 @@ const UsersTable = () => {
     }
   };
 
-  const handleCancelDeleteUser = () => {
-    setSelectedUserHN(null);
-    const modalContainer = document.querySelector(".modal-confirm");
-    modalContainer.style.display = "none";
-  };
-
+  // สั่งลบ User
   const deleteUser = (hn) => {
     fetch(`http://localhost:5000/User/delete/hn/${hn}`, {
       method: "DELETE",
@@ -136,6 +136,7 @@ const UsersTable = () => {
       .catch((error) => console.log(error));
   };
 
+  // Page Handle
   const handlePerPageChange = event => {
     setPerPage(Number(event.target.value));
     setCurrentPage(1);
@@ -153,12 +154,14 @@ const UsersTable = () => {
     setCurrentPage(page);
   };
 
+  //แสดง Modal User แบบแก้ไข User
   const handleEditUser = (user) => {
     setSelectedUser(user);
     const modalContainer = document.querySelector(".modal-user");
     modalContainer.style.display = "block";
   };
 
+  //แสดง Modal User แบบเพิ่ม User
   const handleCreateUser = () => {
     setSelectedUser({
       hn: '',
@@ -171,18 +174,21 @@ const UsersTable = () => {
     modalContainer.style.display = "block";
   };
 
+  //ปิด Modal User
   const handleCloseModalUser = () => {
     setSelectedUser(null);
     const modalContainer = document.querySelector(".modal-user");
     modalContainer.style.display = "none";
   };
 
+  //ปิด Modal Confirm
   const handleCloseModalConfirm = () => {
     setSelectedUserHN(null);
     const modalContainer = document.querySelector(".modal-confirm");
     modalContainer.style.display = "none";
   };
 
+  // คำนวณหน้าและ Item ในหน้า
   const totalPages = Math.ceil(usersData.length / perPage);
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
@@ -396,10 +402,10 @@ const UsersTable = () => {
           Please confirm to delete user.
           <div className="button-wrapper">
             <label>
-              <input type="checkbox" />Don't show again in 5 minutes.
+              <input type="checkbox" className="checkbox-confirm5min" />Don't show again in 5 minutes.
             </label>
             <input type="button" value="CONFIRM" onClick={handleConfirmDeleteUser} />
-            <input type="button" value="CANCEL" onClick={handleCancelDeleteUser} />
+            <input type="button" value="CANCEL" onClick={handleCloseModalConfirm} />
           </div>
         </div>
         <div className="modal-close" onClick={handleCloseModalConfirm}></div>
